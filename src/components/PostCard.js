@@ -1,6 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { truncateString } from "../lib/truncateString";
+import { truncateString } from "../lib/modifyStrings";
 import "../styles/PostCard.component.scss";
 import AuthorLink from "./AuthorLink";
 

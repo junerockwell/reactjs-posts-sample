@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { truncateString } from "../lib/truncateString";
+import { truncateString } from "../lib/modifyStrings";
 import { Button, Card } from "react-bootstrap";
 import "../styles/CommentCard.component.scss";
 
