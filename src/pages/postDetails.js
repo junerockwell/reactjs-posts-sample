@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { getPostDetailById } from "../api/postsApi";
 import CommentSection from "../components/CommentSection";
 import { Spinner, Alert } from "react-bootstrap";
+import AuthorLink from "../components/AuthorLink";
 import "../styles/PostDetails.page.scss";
 
 export default function PostDetails(props) {
+    console.log("PostDetails() ", props)
     const [post, setPost] = useState(null);
     const [errors, setErrors] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -37,6 +39,7 @@ export default function PostDetails(props) {
     return (
         <div>
             <h1>{post.title}</h1>
+            <AuthorLink userId={post.userId} postId={id} />
             <p>{post.body}</p>
             <CommentSection id={id}/>
         </div>
